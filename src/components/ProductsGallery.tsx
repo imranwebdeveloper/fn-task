@@ -17,6 +17,7 @@ import ProductHeader from "./ProductHeader";
 import { RootState } from "../redux/store";
 import { moveSelectedProduct } from "../redux/productSlice";
 import SortableProduct from "./SortableProduct";
+import FileUploadButton from "./FileUploadButton";
 
 const ProductsGallery = () => {
   const products = useSelector((state: RootState) => state.products.data);
@@ -50,6 +51,7 @@ const ProductsGallery = () => {
                 isFirstItem={i === 0 ? true : false}
               />
             ))}
+            <FileUploadButton />
           </div>
         </div>
       </SortableContext>

@@ -14,9 +14,9 @@ export default function FileUploadButton() {
 
   return (
     <div className="parent">
-      <div className="file-upload rounded-md flex justify-center items-center text-slate-500">
+      <div className="file-upload rounded-md flex justify-center items-center flex-col text-slate-500">
         <img src="/images/upload.png" alt="upload" className="w-20 h-20" />
-        <h3> {selectedName || "Click box to upload"}</h3>
+        <h3> {selectedName || "Add Image"}</h3>
         <input type="file" onChange={handleFileChange} />
       </div>
     </div>

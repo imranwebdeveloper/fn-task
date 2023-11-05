@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #eee;
+}
+
+.product-checkbox {
+  visibility: hidden;
+}
+
+.card:hover .product-checkbox {
+  visibility: visible;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 10;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.card:hover .card-overlay {
+  display: block;
+  opacity: 1;
+}
+
+.file-upload {
+  border: 3px dashed rgb(210, 227, 244);
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-upload input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}

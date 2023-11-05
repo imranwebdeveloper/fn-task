@@ -27,16 +27,18 @@ const SortableProduct: FC<SortableProductProps> = ({
   const style = {
     transform: CSS.Transform.toString(transform),
     transition: transition,
-
     gridRowStart: isFirstItem ? "span 2" : "",
     gridColumnStart: isFirstItem ? "span 2" : "",
     backgroundColor: "#ffffff",
-    transformOrigin: "50% 50%",
+    transformOrigin: "0px 0px",
     zIndex: isDragging ? 1 : 0,
   };
 
   return (
-    <div className={`rounded-md border relative card`} style={style}>
+    <div
+      className={`rounded-md border overflow-hidden relative card`}
+      style={style}
+    >
       <label
         className="absolute z-30 w-5 h-5 top-2 left-2 cursor-pointer product-checkbox"
         htmlFor={`checkbox-${product.id}`}

@@ -10,17 +10,16 @@ export type ItemProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 const ProductView = forwardRef<HTMLDivElement, ItemProps>(
-  ({ isDragging, withOpacity, style, isFirstItem, ...props }, ref) => {
+  ({ isDragging, product, style, isFirstItem, ...props }, ref) => {
     const inlineStyles: CSSProperties = {
-      opacity: withOpacity ? "0.5" : "1",
       cursor: isDragging ? "grabbing" : "grab",
-
       height: isFirstItem ? 300 : 150,
       ...style,
     };
 
     return (
       <div ref={ref} style={inlineStyles} {...props} className="card-section ">
+        <img src={product?.img} className="w-full h-full" />
         <div className="card-overlay rounded-md "></div>
       </div>
     );

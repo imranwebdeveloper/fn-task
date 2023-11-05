@@ -41,6 +41,11 @@ const SortableProduct: FC<SortableProductProps> = ({
       <label
         className="absolute z-30 w-5 h-5 top-2 left-2 cursor-pointer product-checkbox"
         htmlFor={`checkbox-${product.id}`}
+        style={{
+          visibility: products.selectedData.includes(product.id)
+            ? "visible"
+            : undefined,
+        }}
       >
         <input
           type="checkbox"

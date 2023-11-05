@@ -10,10 +10,11 @@ export type ItemProps = HTMLAttributes<HTMLDivElement> & {
 };
 
 const ProductView = forwardRef<HTMLDivElement, ItemProps>(
-  ({ isDragging, style, isFirstItem, ...props }, ref) => {
+  ({ isDragging, withOpacity, style, isFirstItem, ...props }, ref) => {
     const inlineStyles: CSSProperties = {
-      opacity: isDragging ? "0.5" : "1",
+      opacity: withOpacity ? "0.5" : "1",
       cursor: isDragging ? "grabbing" : "grab",
+
       height: isFirstItem ? 300 : 150,
       ...style,
     };

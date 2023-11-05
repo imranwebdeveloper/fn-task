@@ -43,7 +43,7 @@ const ProductsGallery = () => {
       <SortableContext items={products} strategy={rectSortingStrategy}>
         <div className="bg-white border max-w-5xl mx-auto flex-1 rounded-md border-spacing-2 gallery">
           <ProductHeader />
-          <div className=" gap-3 p-8  grid grid-cols-5 ">
+          <div className=" gap-3 p-8  grid  lg:grid-cols-5 grid-cols-2 md:grid-cols-4 ">
             {products.map((product, i) => (
               <SortableProduct
                 key={product.id}

@@ -19,7 +19,12 @@ const ProductView = forwardRef<HTMLDivElement, ItemProps>(
     };
 
     return (
-      <div ref={ref} style={inlineStyles} {...props} className="card-section">
+      <div
+        ref={ref}
+        style={inlineStyles}
+        {...props}
+        className="card-section  transition-all"
+      >
         <div className="card-overlay rounded-md transition-all "></div>
       </div>
     );

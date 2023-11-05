@@ -13,7 +13,7 @@ export default function FileUploadButton() {
   };
 
   return (
-    <div className="parent">
+    <div className="parent bg-white">
       <div className="file-upload rounded-md flex justify-center items-center flex-col text-slate-500">
         <img src="/images/upload.png" alt="upload" className="w-20 h-20" />
         <h3> {selectedName || "Add Image"}</h3>

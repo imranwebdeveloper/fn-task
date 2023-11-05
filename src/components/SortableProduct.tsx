@@ -32,6 +32,8 @@ const SortableProduct: FC<SortableProductProps> = ({
     backgroundPosition: "center",
     gridRowStart: isFirstItem ? "span 2" : "",
     gridColumnStart: isFirstItem ? "span 2" : "",
+    backgroundColor: "#ffffff",
+    transformOrigin: "50% 50%",
   };
 
   return (

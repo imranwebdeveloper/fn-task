@@ -34,6 +34,7 @@ const SortableProduct: FC<SortableProductProps> = ({
     gridColumnStart: isFirstItem ? "span 2" : "",
     backgroundColor: "#ffffff",
     transformOrigin: "50% 50%",
+    zIndex: isDragging ? 1 : 0,
   };
 
   return (
